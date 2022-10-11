@@ -1,0 +1,16 @@
+---
+title: Steve Smith
+---
+
+.landing-bg
+  .landing
+    h1 ART TYPE
+    h2 Work By <span>Steve Smith</span>
+    button.button-primary Explore
+
+.main-index
+  - data.works.work.each do |w|
+    .artwork    
+      figure 
+        figcaption = w.caption
+        = image_tag w.img

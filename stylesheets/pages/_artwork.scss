@@ -1,0 +1,31 @@
+.artwork {
+  margin: 0 auto 80px;
+  width: 90%;
+  max-width: 700px;
+  text-align: center;
+}
+
+.artwork > figure > figcaption {
+  font-size: em(12);
+  line-height: 1.2;
+}
+
+.artwork > figure {
+
+  & > img { 
+    margin-top: 25px;
+    border-radius: 3px;
+    box-shadow: 0px 5px 10px rgb(176, 176, 176);
+    box-shadow: 0px 3px 3px rgba(176, 176, 176, 0.7);
+    max-width: 100%; 
+  }
+}
+
+@media only screen and (min-width: em(900)) {
+  .artwork {
+    margin-left: 5%;
+    margin-right: 5%;
+    float: left;
+    width: 40%;
+  }
+}

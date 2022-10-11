@@ -1,0 +1,34 @@
+@font-face {
+  font-family: 'Future';
+  src: url('#{$prefix}/fonts/Future45.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Future';
+  src: url('#{$prefix}/fonts/Future45-oblique.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Future';
+  src: url('#{$prefix}/fonts/Future95.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Future';
+  src: url('#{$prefix}/fonts/Future95-oblique.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'FutureScript';
+  src: url('#{$prefix}/fonts/FutureScript.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}

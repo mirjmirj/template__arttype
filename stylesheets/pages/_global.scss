@@ -1,0 +1,223 @@
+.js header, .js .main, .js .nav-side, .js footer {
+  display: none;
+}
+
+header, footer {
+  z-index: 1000;
+  background: rgb(248,248,248);
+  background: rgba(248, 248, 248, 0.97);
+}
+
+header {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px; 
+  box-shadow: 0px 4px 4px -4px #B1B1B1
+}
+
+.nav-main-ul {
+  margin: 0.6em 0;
+  text-align: center;
+}
+
+.nav-main-ul > li:first-child {
+  display: none;
+  font-weight: bold;
+}
+
+
+.nav-main-ul > li {
+  @include transition (background 0.2s linear);
+  @include ellipsis();
+  display: inline-block;
+  margin-right: 15px;
+  border-radius: 1px;
+  text-align: center;
+  &:last-child {
+    margin-right: 0;
+  }
+  &:hover {
+    background: $base-accent-color;
+    cursor: pointer;
+  }
+  &:hover > a {
+    color: #fff;
+  }
+}
+
+.nav-main-ul > li > a {
+  position: relative;
+  display: block;
+  padding: 0 6px;
+  color: #000;
+  font-size: em(12);
+  text-transform: uppercase;
+}
+
+.nav-filter {
+  display: none;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-height: 50px;
+}
+
+.nav-filter-ul {
+  opacity: .94;
+  background: rgb(30,30,30);
+  padding-left: 10px;
+  padding-right: 10px;
+  min-height: 50px;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.nav-filter-ul > li {
+  @include transition (color, 0.2s, linear);
+  display: inline-block;
+  margin-right: 25px;
+  padding: 0 8px;
+  font-size: em(12px);
+  text-align: center;
+  cursor: pointer;
+  &:last-child {
+    margin-right: 0;
+  }
+  &:hover {
+    color: darken( rgb(220,220,220), 20% );
+  }
+}
+
+.nav-filter-ul + span {
+  z-index: 100000;
+  position: absolute;
+  right: 10px;
+  top: 13px;
+  cursor: pointer;
+  font-size: 12px;
+  color: rgb(90, 90, 90);
+}
+
+footer {
+  position: fixed;
+  display: block;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: 0px -1px 2px -2px rgb(176, 176, 176)
+}
+
+footer > ul > li {
+  display: none;
+  width: 100%;
+  padding: .5em 0;
+  font-size: em(12);
+  text-align: center;
+  &:first-child { 
+    display: inline-block; 
+  }
+}
+
+.nav-side {
+  display: none;
+  z-index: 100;
+  position: fixed;
+  left: -55px;
+  bottom: 25%;
+
+  & > ul {
+    @include transform( rotate(90deg) );
+    display: inline-block;
+  }
+
+  & > ul > li {
+    position: relative;
+    top: 10px;
+    padding-bottom: 20px;
+    display: inline-block;
+    background: #000;
+    margin-right: 8px;
+    text-align: center;
+    box-shadow: 2px -2px 4px -2px rgb(150, 150, 150);
+    border-radius: 2px;
+  }
+
+  & > ul > li > a {
+    display: block;
+    padding: 0.2em 1em;
+    font-size: em(12);
+    color: #fff;
+    &:hover {
+      color: darken(#fff, 20%);
+    }
+  }
+}
+
+@media only screen and (min-width: $small-screen) {
+  .nav-main-ul > li {
+    margin-right: 20px;
+  }
+  .nav-main-ul > li > a {
+    padding: 4px 10px;
+    font-size: em(15);
+  }
+  footer > ul > li {
+    display: inline-block;
+    width: 33.333333333333333333333%;
+  }
+}
+
+figure > img {
+  cursor: pointer;
+}
+
+.progress {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -100px;
+  margin-left: -100px;
+  width: 200px;
+  height: 200px;
+  & > h4 {
+    text-align: center;
+  }
+}
+.progress-bar {
+  margin: 0 auto;
+  background: #ddd;
+  border-radius: 6px;
+  width: 180px;
+  height: 20px;
+}
+.progress-load {
+  border-radius: 6px;
+  background-color: #477DCA;
+  width: 0%;
+  height: 100%;
+}
+
+@media only screen and (min-width: em(500)) {
+   .nav-filter-ul {
+    height: 50px;
+    line-height: 50px;
+  }
+}
+
+@media only screen and (min-width: $medium-screen) {
+  .nav-side { display: block; }
+  .nav-filter-ul > li {
+    font-size: em(13);
+  }
+}
+@media only screen and (min-width: $large-screen) {
+  .nav-main-ul > li, .nav-filter-ul > li {
+    margin-right: 80px;
+  }
+}

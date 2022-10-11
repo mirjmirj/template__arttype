@@ -1,0 +1,39 @@
+.js .about-splash {
+  z-index: 100;
+  position: absolute;
+  display: none;
+  top: -70px;
+  left: 0;
+  right: 0;
+}
+
+.about-content {
+  position: relative;
+  top: 200px;
+  margin: 0px auto 270px;
+  width: 80%;
+  max-width: 800px;
+  font-size: em(14px);
+ } 
+  
+.about-content > h1 {
+  font-size: em(28px);
+  text-align: center;
+}
+
+.about-splash {
+  background: url('#{$prefix}/images/bg01.jpg') no-repeat center 50px;  
+  background-size: cover;
+
+  height: 250px;
+}
+
+@media only screen and (min-width: $small-screen) {
+  .about-content > h1 {
+    font-size: 2.25em;
+  }
+
+  .about-content {
+    font-size: 1em;
+  }
+}

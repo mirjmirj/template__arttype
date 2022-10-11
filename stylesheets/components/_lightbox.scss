@@ -1,0 +1,57 @@
+.lightbox {
+  z-index: 10000;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  background: rgb(0,0,0); // fallback for browsers w/o rgba
+  background: rgba(0,0,0,0.8);
+}
+
+.lightbox-content > figure > figcaption {
+  position: relative;
+  top: 4px;
+  color: rgb(255,255,255);
+  font-style: italic;
+  font-size: em(12);
+  text-align: center;
+}
+
+// center image fallback
+.lightbox-img {
+  position: absolute;
+  max-width: 80%;
+  top: 10%;
+  left: 10%;
+}
+
+// :empty prevents ie8 and below to not parse following block
+.lightbox-img:empty {
+  @include transform(translate(-50%, -50%));
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  cursor: default;
+  border-radius: 3px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.lightbox-close {
+  position: fixed;
+  top: 5px;
+  right: 10px;
+  font-size: 14px;
+  color: rgba(255,255,255,0.4);
+  cursor: pointer;
+}
+
+@media screen and (orientation: portrait) {
+  .lightbox-img { max-width: 80%; }
+}
+
+@media screen and (orientation: landscape) {
+  .lightbox-img { max-height: 80%; }
+}

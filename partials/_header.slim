@@ -1,0 +1,18 @@
+- prefix = "";
+
+header
+  nav.nav-main
+    ul.nav-main-ul
+      li: a Filter
+      li = link_to "Works", "#{prefix}/"
+      li = link_to "Art Type", "#{prefix}/about"
+      li = link_to "Contact", "#{prefix}/contact"
+
+  nav.nav-filter
+    ul.nav-filter-ul
+      li.nav-filter-none data-name="none": span None
+      li.nav-filter-illustration data-name="illustration": span Illustration
+      li.nav-filter-installation data-name="installation": span Installation
+      li.nav-filter-graphics data-name="graphics": span Graphics
+      li.nav-filter-publications data-name="publications": span Publications
+    span X

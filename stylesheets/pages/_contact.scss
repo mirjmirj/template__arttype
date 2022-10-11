@@ -1,0 +1,23 @@
+.main-contact {
+  margin: 100px auto;
+  text-align: center;
+}
+
+
+@media only screen and (min-width: $small-screen) {
+  .main-contact > h1 {
+    font-size: em(60px);
+  }
+}
+
+@media only screen and (min-width: $medium-screen) {
+  .main-contact > h1 {
+    font-size: em(80px);
+  }
+}
+
+@media only screen and (min-width: $large-screen) {
+  .main-contact > h1 {
+    font-size: em(100px);
+  }
+}
